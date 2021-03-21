@@ -36,6 +36,23 @@ const Login = () => {
 
 //----------sign in with facebook----------------------
 
+    const handleFbSignIn = () => {
+        const provider = new firebase.auth.FacebookAuthProvider();
+        firebase.auth()
+        .signInWithPopup(provider)
+        .then((result) => {
+            var credential = result.credential;
+            var user = result.user;
+            var accessToken = credential.accessToken;
+        })
+        .catch((error) => {
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            var email = error.email;
+            var credential = error.credential;
+        });
+    }
+
     const handleBlur = (e) => {
         let isFieldValid = true;
         if (e.target.name === 'email') {
@@ -128,7 +145,7 @@ const Login = () => {
                     {newUser ? ' Login' : ' Create an account'}</Link>
                 </p>
             <button className="btn-style" onClick={handleGoogleSignIn}>Continue with Google</button>
-            <button className="btn-style">Continue with Facebook</button>
+            <button className="btn-style" onClick={handleFbSignIn}>Continue with Facebook</button>
         </div>
     );
 };

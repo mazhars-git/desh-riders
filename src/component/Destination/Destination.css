@@ -8,3 +8,12 @@
 .location-image img{
     width: 80%;
 }
+.card{
+    color: blue;
+}
+.card li{
+    float: left;
+}
+.card img{
+    width: 20%;
+}

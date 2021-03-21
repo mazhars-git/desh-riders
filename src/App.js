@@ -14,7 +14,6 @@ import Blog from './component/Blog/Blog';
 import Contact from './component/Contact/Contact';
 import Login from './component/Login/Login';
 import PrivateRoute from './component/PrivateRoute/PrivateRoute';
-import fakeData from './component/FakeData/VehicleData.json';
 
 
 export const UserContext = createContext();
@@ -33,7 +32,7 @@ function App() {
                 <Route exact path= '/'>
                     <Home />
                 </Route>
-                <Route path= '/destination'>
+                <Route path= "/destination/:key">
                     <Destination />
                 </Route>
                 <Route path= '/blog'>
