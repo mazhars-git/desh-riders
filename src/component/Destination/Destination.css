@@ -1,0 +1,10 @@
+.search-area{
+    background-color: orangered;
+    color: #fff;
+    border-radius: 10px;
+    width: 30%;
+}
+
+.location-image img{
+    width: 80%;
+}

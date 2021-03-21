@@ -33,9 +33,9 @@ function App() {
                 <Route exact path= '/'>
                     <Home />
                 </Route>
-                <PrivateRoute path= '/destination'>
+                <Route path= '/destination'>
                     <Destination />
-                </PrivateRoute>
+                </Route>
                 <Route path= '/blog'>
                     <Blog />
                 </Route>
