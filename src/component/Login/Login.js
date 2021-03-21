@@ -134,7 +134,7 @@ const Login = () => {
                 <br/>
                 <input onBlur={handleBlur} type="password" name="password" placeholder="Your Password" required className="input-style"/>
                 <br/>
-                {/* <input type="password" name="confirmPass" placeholder="Confirm Password" required className="input-style"/> */}
+                {newUser && <input type="password" name="confirmPass" placeholder="Confirm Password" required className="input-style"/>}
                 <br/>
                 <input type="submit" value={newUser ? 'Sign up' : 'Login'} className="btn-submit"/>
             </form>

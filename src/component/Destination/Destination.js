@@ -13,6 +13,7 @@ const Destination = () => {
     const rider = fakeData.find(rd => rd.key === key);
     const [locationF, setLocationF] = useState();
     const [locationT, setLocationT] = useState();
+    const [trDate, setTrDate] = useState();
 
     const handleLocation = (e) => {
         if (e.target.name === 'from') {
@@ -22,6 +23,10 @@ const Destination = () => {
         if (e.target.name === 'to') {
             const locationTo = e.target.value;
             setLocationT(locationTo);
+        }
+        if (e.target.name === 'travelDate') {
+            const travelDate = e.target.value;
+            setTrDate(travelDate);
         }
     }
 
@@ -34,6 +39,7 @@ const Destination = () => {
                             <p>{locationF}</p> 
                             <p><FontAwesomeIcon icon={faAngleDoubleDown} /></p>
                             <p>{locationT}</p>
+                            <p>{trDate}</p>
                         </div>
                         <div className="card card-area">
                             <img className="rideImage" src={rider.image} alt=""/>
@@ -59,6 +65,7 @@ const Destination = () => {
                         <input onBlur={handleLocation} className='form-control' type="text" name="from"/>
                         <p>Pic to</p>
                         <input onBlur={handleLocation} className='form-control' type="text" name="to"/><br/>
+                        <input type="date" name="travelDate"/> <br/>
                         <input onClick={() => setSearch(!search)} className='btn-style' type="button" value="Search"/>
                     </form>}
                 </div>

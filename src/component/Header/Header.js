@@ -6,7 +6,6 @@ import './Header.css';
 
 const Header = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
-    const [isLoggedIn, setIsLoggedIn] = useState(false);
     return (
         <div className="header-area">
             <div className="main-menu container">
@@ -35,11 +34,11 @@ const Header = () => {
                                 <li>
                                     <Link to="/contact">Contact</Link>
                                 </li>
-                                <li>
-                                    <Link to="/login">{isLoggedIn ? 'Login' : ''}</Link>
+                                <li>                                
+                                    <Link to="/login">Login</Link>
                                 </li>
                                 <li>
-                                    <Link onClick={() => setLoggedInUser({})} to="/login">{isLoggedIn ? '' : 'Sign Out'}</Link>
+                                    <Link onClick={() => setLoggedInUser({})} to="/">Sign Out</Link> 
                                 </li>
                             </ul>
                         </nav>

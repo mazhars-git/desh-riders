@@ -13,9 +13,14 @@ li{
 }
 .nav a, .logo-area a{
     text-decoration: none;
-    color: black;
+    color: white;
     font-weight: bold;
+    padding: 5px 8px;
   }
+.nav a:hover{
+    background-color: navy;
+    border-radius: 5px;
+}
 .main-menu{
     padding-top: 20px;
 }
