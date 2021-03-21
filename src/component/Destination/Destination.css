@@ -1,19 +1,40 @@
+.destination-area{
+    margin-top: 20px;
+}
 .search-area{
-    background-color: orangered;
+    background-color: rgb(79, 140, 211);
     color: #fff;
     border-radius: 10px;
     width: 30%;
+    height: 100%;
+    font-size: 20px;
+    font-weight: 600;
+    padding-bottom: 20px;
 }
 
 .location-image img{
     width: 80%;
 }
-.card{
-    color: blue;
+.content{
+    padding-top: 25px;
 }
-.card li{
-    float: left;
+.card-area{
+    color: rgb(255, 123, 0);
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10px;
+    margin: 10px 0;
 }
-.card img{
-    width: 20%;
+.card-area p{
+    margin-top: 12px;
+}
+
+.card-area img{
+    width: 25%;
+}
+.form-area p{
+    padding-top: 15px;
+}
+.form-area{
+    padding-bottom: 20px;
 }

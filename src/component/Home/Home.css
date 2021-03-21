@@ -1,7 +1,10 @@
 .all-riders{
     margin-top: 50px;
+    flex-wrap: wrap;
 }
-
+.all-riders a:hover{
+    text-decoration: none;
+}
 .rider-box{
     background-color: rgb(255, 186, 95);
     margin: 10px;

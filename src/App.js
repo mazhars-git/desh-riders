@@ -29,10 +29,10 @@ function App() {
                 <Route path= '/home'>
                     <Home />
                 </Route>
-                <Route exact path= '/'>
-                    <Home />
-                </Route>
-                <Route path= "/destination/:key">
+                <PrivateRoute path= '/destination/:key'>
+                    <Destination />
+                </PrivateRoute>
+                <Route path= '/destination'>
                     <Destination />
                 </Route>
                 <Route path= '/blog'>
@@ -44,8 +44,11 @@ function App() {
                 <Route path= '/login'>
                     <Login />
                 </Route>
+                <Route exact path= '/'>
+                    <Home />
+                </Route>
                 <Route path= '*'>
-                    <h1>404! something went wrong! try again.</h1>
+                    <h1 style={{color: 'red'}}>404! something went wrong! try again.</h1>
                 </Route>
             </Switch>
         </Router>

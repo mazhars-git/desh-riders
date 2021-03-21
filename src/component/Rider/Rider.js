@@ -5,8 +5,6 @@ import '../Header/Header.css';
 
 const Rider = (props) => {
     const {title, image, key} = props.rider;
-    console.log('car', key)
-
     return (
         <Link to={`/destination/${key}`}>
             <div className="rider-box">
@@ -14,7 +12,6 @@ const Rider = (props) => {
                 <img src={image} alt=""/>
             </div>
         </Link>
-    
     );
 };
 
